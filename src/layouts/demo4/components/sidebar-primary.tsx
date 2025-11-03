@@ -15,6 +15,10 @@ import {
   ShoppingCart,
   UserCircle,
   Users,
+  Newspaper,
+  Boxes,
+  SquareChevronRight, ChartBarIncreasing
+
 } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { getHeight } from '@/lib/dom';
@@ -39,54 +43,75 @@ interface MenuItem {
 const menuItems: MenuItem[] = [
   { icon: BarChart3, tooltip: 'Dashboard', path: '/', rootPath: '/' },
   {
-    icon: UserCircle,
-    tooltip: 'Profile',
+    icon: Newspaper,
+    tooltip: 'Invoice',
     path: '/public-profile/profiles/default',
     rootPath: '/public-profile/',
   },
+
   {
-    icon: Settings,
-    tooltip: 'Account',
-    path: '/account/home/get-started',
-    rootPath: '/account/',
-  },
-  {
-    icon: Users,
-    tooltip: 'Network',
+    icon: Boxes,
+    tooltip: 'Integration',
     path: '/network/get-started',
     rootPath: '/network/',
   },
   {
-    icon: ShoppingCart,
-    tooltip: 'Store - Client',
+    icon: ChartBarIncreasing,
+    tooltip: 'Reportings',
+    path: '/store-client/checkout/shipping-info',
+    rootPath: '/store-client',
+  },
+
+  {
+    icon: SquareChevronRight,
+    tooltip: 'Logs',
     path: '/store-client/home',
-    rootPath: '',
+    rootPath: '/store-client/home',
   },
+  // {
+  //   icon: Boxes,
+  //   tooltip: 'Integration',
+  //   path: '/network/get-started',
+  //   rootPath: '/network/',
+  // },
+  // {
+  //   icon: SquareChevronRight,
+  //   tooltip: 'Logs',
+  //   path: '/network/get-started',
+  //   rootPath: '/network/',
+  // },
+
+
+  // {
+  //   icon: ShoppingCart,
+  //   tooltip: 'Store - Client',
+  //   path: '/store-client/home',
+  //   rootPath: '',
+  // },
+  // {
+  //   icon: Shield,
+  //   tooltip: 'Authentication',
+  //   path: '/authentication/get-started',
+  //   rootPath: '/authentication/',
+  // },
+  // {
+  //   icon: MessageSquare,
+  //   tooltip: 'Security Logs',
+  //   path: '/account/security/security-log',
+  //   rootPath: '/account/',
+  // },
+  // {
+  //   icon: Bell,
+  //   tooltip: 'Notifications',
+  //   path: '/account/notifications',
+  //   rootPath: '',
+  // },
   {
-    icon: Shield,
-    tooltip: 'Authentication',
-    path: '/authentication/get-started',
-    rootPath: '/authentication/',
-  },
-  {
-    icon: MessageSquare,
-    tooltip: 'Security Logs',
-    path: '/account/security/security-log',
+    icon: Settings,
+    tooltip: 'Settings',
+    path: '/account/home/get-started',
     rootPath: '/account/',
   },
-  {
-    icon: Bell,
-    tooltip: 'Notifications',
-    path: '/account/notifications',
-    rootPath: '',
-  },
-  {
-    icon: CheckSquare,
-    tooltip: 'ACL',
-    path: '/account/members/roles',
-    rootPath: '',
-  },
-  { icon: Code, tooltip: 'API Keys', path: '/account/api-keys', rootPath: '' },
 ];
 
 export function SidebarPrimary() {
@@ -179,7 +204,7 @@ export function SidebarPrimary() {
           ref={footerRef}
           className="flex flex-col gap-4 items-center shrink-0"
         >
-          <ChatSheet
+          {/* <ChatSheet
             trigger={
               <Button
                 variant="ghost"
@@ -189,7 +214,7 @@ export function SidebarPrimary() {
                 <MessageCircleMore className="size-4.5!" />
               </Button>
             }
-          />
+          /> */}
           <AppsDropdownMenu
             trigger={
               <Button

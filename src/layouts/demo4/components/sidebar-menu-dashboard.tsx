@@ -178,8 +178,8 @@ export function SidebarMenuDashboard() {
 
   return (
     <div className="w-full space-y-1">
-      {buildDropdown()}
-      {buildMenu()}
+      {/* {buildDropdown()} */}
+      {/* {buildMenu()} */}
     </div>
   );
 }

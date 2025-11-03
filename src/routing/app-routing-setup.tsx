@@ -80,6 +80,7 @@ import {
   ProjectColumn2Page,
   ProjectColumn3Page,
 } from '@/pages/public-profile';
+import { Reporting } from '@/pages/reportings';
 import { AllProductsPage, DashboardPage } from '@/pages/store-admin';
 import {
   MyOrdersPage,
@@ -103,6 +104,14 @@ export function AppRoutingSetup() {
         <Route element={<Demo4Layout />}>
           <Route path="/" element={<DefaultPage />} />
           <Route path="/dark-sidebar" element={<Demo1DarkSidebarPage />} />
+          {/* <Route
+            path="/reporting"
+            element={<Reporting />}
+          />
+          <Route
+            path="/reporting-and-reconciliation"
+            element={<Reporting />}
+          /> */}
           <Route
             path="/public-profile/profiles/default/"
             element={<ProfileDefaultPage />}
@@ -381,6 +390,7 @@ export function AppRoutingSetup() {
             path="/store-admin/inventory/all-products"
             element={<AllProductsPage />}
           />
+       
           <Route path="/auth/get-started" element={<AccountGetStartedPage />} />
         </Route>
       </Route>
