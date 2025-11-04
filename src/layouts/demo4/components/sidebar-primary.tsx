@@ -45,72 +45,32 @@ const menuItems: MenuItem[] = [
   {
     icon: Newspaper,
     tooltip: 'Invoice',
-    path: '/public-profile/profiles/default',
-    rootPath: '/public-profile/',
+    path: '/preinvoices',
+    rootPath: '/preinvoices',
   },
-
   {
     icon: Boxes,
     tooltip: 'Integration',
-    path: '/network/get-started',
-    rootPath: '/network/',
+    path: '/datadictionary',
+    rootPath: '/datadictionary',
   },
   {
     icon: ChartBarIncreasing,
-    tooltip: 'Reportings',
-    path: '/store-client/checkout/shipping-info',
-    rootPath: '/store-client',
+    tooltip: 'Reports',
+    path: '/repotingandreconciliation',
+    rootPath: '/repotingandreconciliation',
   },
-
   {
     icon: SquareChevronRight,
     tooltip: 'Logs',
-    path: '/store-client/home',
-    rootPath: '/store-client/home',
+    path: '/logs',
+    rootPath: '/logs',
   },
-  // {
-  //   icon: Boxes,
-  //   tooltip: 'Integration',
-  //   path: '/network/get-started',
-  //   rootPath: '/network/',
-  // },
-  // {
-  //   icon: SquareChevronRight,
-  //   tooltip: 'Logs',
-  //   path: '/network/get-started',
-  //   rootPath: '/network/',
-  // },
-
-
-  // {
-  //   icon: ShoppingCart,
-  //   tooltip: 'Store - Client',
-  //   path: '/store-client/home',
-  //   rootPath: '',
-  // },
-  // {
-  //   icon: Shield,
-  //   tooltip: 'Authentication',
-  //   path: '/authentication/get-started',
-  //   rootPath: '/authentication/',
-  // },
-  // {
-  //   icon: MessageSquare,
-  //   tooltip: 'Security Logs',
-  //   path: '/account/security/security-log',
-  //   rootPath: '/account/',
-  // },
-  // {
-  //   icon: Bell,
-  //   tooltip: 'Notifications',
-  //   path: '/account/notifications',
-  //   rootPath: '',
-  // },
   {
     icon: Settings,
     tooltip: 'Settings',
-    path: '/account/home/get-started',
-    rootPath: '/account/',
+    path: '/organizationprofile',
+    rootPath: '/organizationprofile',
   },
 ];
 

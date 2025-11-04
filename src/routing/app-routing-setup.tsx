@@ -45,6 +45,14 @@ import {
   AuthWelcomeMessagePage,
 } from '@/pages/auth';
 import { DefaultPage, Demo1DarkSidebarPage } from '@/pages/dashboards';
+import { DataDictionary } from '@/pages/Integration/datadictionary';
+import { KeysAndCredentials } from '@/pages/Integration/keysandcredentials';
+import { Onboarding } from '@/pages/Integration/onboarding';
+import { BulkUpload } from '@/pages/invoicing/bulkupload';
+import { PreInvoices } from '@/pages/invoicing/preinvoices';
+import { Reportings } from '@/pages/invoicing/reporting';
+import { Logs } from '@/pages/logs/logs';
+
 import {
   NetworkAppRosterPage,
   NetworkAuthorPage,
@@ -80,7 +88,14 @@ import {
   ProjectColumn2Page,
   ProjectColumn3Page,
 } from '@/pages/public-profile';
-import { Reporting } from '@/pages/reportings';
+import { InvoiceStatusLogs } from '@/pages/reporting/invoice_status_logs';
+import { ReportingAndReconciliation } from '@/pages/reporting/tax_authority_reports';
+import { TaxAuthorityReports } from '@/pages/reporting/repoting_and_reconciliation';
+import { MailConfiguration } from '@/pages/settings/mailconfiguration';
+import { NumberRange } from '@/pages/settings/numberrange';
+import { OrganizationProfile } from '@/pages/settings/organizationprofile';
+import { TaxConfiguration } from '@/pages/settings/taxconfiguration';
+// import { Reporting } from '@/pages/reportings';
 import { AllProductsPage, DashboardPage } from '@/pages/store-admin';
 import {
   MyOrdersPage,
@@ -96,6 +111,10 @@ import {
   WishlistPage,
 } from '@/pages/store-client';
 import { Navigate, Route, Routes } from 'react-router';
+import { HSCodeRegistration } from '@/pages/settings/hscoderegistration';
+import { ProviderSetup } from '@/pages/settings/proviedersetup';
+import { MappingTemplate } from '@/pages/settings/mappingtemplate';
+import { DigitalSignatureManage } from '@/pages/settings/digitalsignaturemanager';
 
 export function AppRoutingSetup() {
   return (
@@ -104,14 +123,121 @@ export function AppRoutingSetup() {
         <Route element={<Demo4Layout />}>
           <Route path="/" element={<DefaultPage />} />
           <Route path="/dark-sidebar" element={<Demo1DarkSidebarPage />} />
-          {/* <Route
-            path="/reporting"
-            element={<Reporting />}
+
+
+
+
+
+
+          {/* Invoices */}
+          <Route
+            path="/reportings"
+            element={<Reportings />}
           />
           <Route
-            path="/reporting-and-reconciliation"
-            element={<Reporting />}
-          /> */}
+            path="/preinvoices"
+            element={<PreInvoices />}
+          />
+          <Route
+            path="/bulkupload"
+            element={<BulkUpload />}
+          />
+
+
+
+
+
+
+          {/*Integration  */}
+
+          <Route
+            path="/datadictionary"
+            element={<DataDictionary />}
+          />
+          <Route
+            path="/onboarding"
+            element={<Onboarding />}
+          />
+          <Route
+            path="/keysandcredentials"
+            element={< KeysAndCredentials />}
+          />
+
+
+
+
+
+
+          {/*Reporting  */}
+
+          <Route
+            path="/repotingandreconciliation"
+            element={<ReportingAndReconciliation />}
+          />
+          <Route
+            path="/taxauthorityreports"
+            element={<TaxAuthorityReports />}
+          />
+          <Route
+            path="/invoicestatuslogs"
+            element={< InvoiceStatusLogs />}
+          />
+
+
+
+
+          {/*Logs  */}
+          <Route
+            path="/logs"
+
+            element={<Logs />}
+          />
+
+
+
+
+
+          {/* Settings */}
+
+          <Route
+            path="/organizationprofile"
+            element={<OrganizationProfile />}
+          />
+          <Route
+            path="/mailconfiguration"
+            element={<MailConfiguration />}
+          />
+          <Route
+            path="/taxconfiguration"
+            element={<TaxConfiguration />}
+          />
+
+          <Route
+            path="/numberrange"
+            element={<NumberRange />}
+          />
+          {/*  */}
+          <Route
+            path="/providersetup"
+            element={<ProviderSetup />}
+          />
+          <Route
+            path="/mappingtemplate"
+            element={<MappingTemplate />}
+          />
+          <Route
+            path="/hscoderegistration"
+            element={<HSCodeRegistration />}
+          />
+
+          <Route
+            path="/digitalsignaturemanage"
+            element={<DigitalSignatureManage />}
+          />
+
+
+
+
           <Route
             path="/public-profile/profiles/default/"
             element={<ProfileDefaultPage />}
@@ -390,7 +516,7 @@ export function AppRoutingSetup() {
             path="/store-admin/inventory/all-products"
             element={<AllProductsPage />}
           />
-       
+
           <Route path="/auth/get-started" element={<AccountGetStartedPage />} />
         </Route>
       </Route>
